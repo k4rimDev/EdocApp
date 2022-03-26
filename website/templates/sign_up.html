@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+    <img class="wave" src="{{ url_for('static', filename='img/wave.png') }}">
+	<div class="login-container">
+		<div class="img">
+			<img src="{{ url_for('static', filename='img/bg.svg') }}">
+		</div>
+		<div class="login-content">
+			<form method="POST" style="margin-top: 100px;" class="login-form">
+				<img src="{{ url_for('static', filename='img/avatar.svg') }}">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-at"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Email</h5>
+           		   		<input
+                            type="email" 
+                            class="input" 
+                            name="email" 
+                            id="email" 
+                        >
+           		   </div>
+           		</div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                         <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>First name</h5>
+                        <input
+                        type="text" 
+                        class="input" 
+                        name="firstName" 
+                        id="firstName" 
+                        >
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i"> 
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input
+                        type="password" 
+                        class="input" 
+                        name="password1" 
+                        id="password1"
+                        >
+                    </div>
+                </div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-circle-check"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Confirm password</h5>
+                        <input
+                            type="password" 
+                            class="input" 
+                            name="password2" 
+                            id="password2" 
+                        >
+            	   </div>
+            	</div>
+                <!-- <button class="btn btn-primary" type="submit">Login</button> -->
+            	<input type="submit" class="login-btn" value="Sign up">
+            </form>
+        </div>
+    </div>
+{% endblock %}
